@@ -1,0 +1,37 @@
+@mixin theme($name, $main-color, $menuitem-color) {
+	    .#{$name} {
+		        .app-navbar .sidebar-nav {
+			            background: darken($main-color,10);
+		        }
+		        .app-navbar .sidebar-nav ul.metismenu li a:focus, .app-navbar .sidebar-nav ul.metismenu li a:hover{
+			            background:$main-color
+		        }
+		        .app-navbar .sidebar-nav ul.metismenu li ul{
+			            background: lighten($main-color,30);
+		        }
+		        .app-navbar .sidebar-nav ul.metismenu li.nav-static-title{
+			            color:$main-color;
+		        }
+		
+		        .app-navbar .sidebar-nav ul.metismenu > li > a{
+			            color:$menuitem-color
+		        }
+		        .app-navbar .sidebar-nav ul.metismenu li.active ul li.active a {
+			            color: $main-color!important;
+		        }
+		        .app-navbar .sidebar-nav ul.metismenu li.active ul li.active a:before{
+			            background: $main-color
+		        }
+		        .app-navbar .sidebar-nav ul.metismenu > li.active > a{
+			            background: $main-color;
+		        }
+		        .app-navbar .sidebar-nav ul.metismenu li.active ul li.active a:focus, .app-navbar .sidebar-nav ul.metismenu li.active ul li.active a:hover{
+			            color: $main-color;
+		        }
+		        .app-navbar .sidebar-nav ul.metismenu li.active ul li a:focus, .app-navbar .sidebar-nav ul.metismenu li.active ul li a:hover {
+			            color: $main-color!important;
+		        }
+	    }
+  }
+  @include theme(theme-dark, #4bc076, #fff);
+  @include theme(theme-light, #2d86cf, #fff);

@@ -1,0 +1,17 @@
+/node_modules
+/public/assets/img/letter-pad.png
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/nbproject
+/.svn
+update.bat
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log

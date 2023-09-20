@@ -1,0 +1,56 @@
+/* tabs design  */
+@mixin theme($name, $main-color) {
+    .#{$name} {
+        nav > .nav.nav-tabs{
+
+            border: none;
+              color:#fff;
+              background:rgba(0, 0, 0, 0.03);
+              border-radius:0;
+          
+          }
+          nav > div a.nav-item.nav-link
+          {
+            border: none;
+              padding: 10px 25px;
+              color:#333;
+              border-radius:0;
+              position: relative;
+          }
+          
+          nav > div a.nav-item.nav-link.active:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            border: 10px solid transparent;
+            border-top-color: $main-color;
+            transform: translate(-50%);
+          }
+          .tab-content{
+            background: #fdfdfd;
+              line-height: 25px;
+              border: 1px solid #ddd;
+              border-top:2px solid $main-color;
+              /* padding:15px 25px; */
+          }
+          
+          nav > div a.nav-item.nav-link:hover,
+          nav > div a.nav-item.nav-link:focus,
+          nav > div a.nav-item.nav-link.active
+          {
+            border: none;
+              background: $main-color;
+              color:#fff;
+              border-radius:0;
+              transition:background 0.20s linear;
+          }
+    }
+}
+@include theme(theme-dark, #4bc076);
+@include theme(theme-light, #2d86cf);
+
+
+
+
+/* tabs design end */

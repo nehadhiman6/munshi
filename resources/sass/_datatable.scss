@@ -1,0 +1,11 @@
+@mixin theme($name, $main-color) {
+    .#{$name} {
+            table tr th{
+                background:$main-color;
+            }
+    }
+}
+@include theme(theme-dark, #4bc076);
+@include theme(theme-light, #2d86cf);
+
+

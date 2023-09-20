@@ -1,0 +1,32 @@
+@mixin theme($name, $main-color) {
+    .#{$name} {
+        .app-wrap{
+                background:lighten($main-color,40);
+            }
+    }
+}
+@include theme(theme-dark, #4bc076);
+@include theme(theme-light, #2d86cf);
+
+// Variables
+@import 'variables';
+
+// Topbar
+@import 'topbar';
+
+// Sidebar
+@import 'sidebar';
+
+// datatables
+@import 'datatable';
+
+// card
+@import 'card';
+
+// modal
+@import 'modal';
+
+//tabs
+@import 'tabs';
+
+

@@ -1,0 +1,13 @@
+@mixin theme($name, $main-color, $topbar-bg) {
+    .#{$name} {
+        .top-bar .navbar .navbar-header{
+            background: $main-color;
+        }
+        
+        .top-bar .navigation {
+            background:$topbar-bg
+        }
+    }
+}
+@include theme(theme-dark, #4bc076, #fff);
+@include theme(theme-light, #2d86cf, #fff);

@@ -1,0 +1,12 @@
+@mixin theme($name, $main-color) {
+    .#{$name} {
+        .iw-sider-card-wrap {
+            border-color: $main-color;
+        }
+        div .btn.iw-btn-add {
+            background: $main-color;
+        }
+    }
+}
+@include theme(theme-dark, #4bc076);
+@include theme(theme-light, #2d86cf);
